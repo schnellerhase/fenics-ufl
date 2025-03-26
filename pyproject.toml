@@ -87,10 +87,8 @@ convention = "google"
 
 [tool.mypy]
 disable_error_code = [
-    "arg-type",
     "assignment",
     "attr-defined",
     "misc",
     "operator",
-    "type-var",
 ]

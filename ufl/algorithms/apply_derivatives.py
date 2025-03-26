@@ -1369,6 +1369,7 @@ class BaseFormOperatorDerivativeRuleset(GateauxDerivativeRuleset):
             self, coefficients, arguments, coefficient_derivatives, pending_operations
         )
 
+    @staticmethod
     def pending_operations_recording(base_form_operator_handler):
         """Decorate a function to record pending operations."""
 
