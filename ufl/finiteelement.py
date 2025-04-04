@@ -65,22 +65,6 @@ class AbstractFiniteElement(_abc.ABC):
         """Return the pullback for this element."""
 
     @_abc.abstractproperty
-    def embedded_superdegree(self) -> _typing.Union[int, None]:
-        """Degree of the minimum degree Lagrange space that spans this element.
-
-        This returns the degree of the lowest degree Lagrange space such
-        that the polynomial space of the Lagrange space is a superspace
-        of this element's polynomial space. If this element contains
-        basis functions that are not in any Lagrange space, this
-        function should return None.
-
-        Note that on a simplex cells, the polynomial space of Lagrange
-        space is a complete polynomial space, but on other cells this is
-        not true. For example, on quadrilateral cells, the degree 1
-        Lagrange space includes the degree 2 polynomial xy.
-        """
-
-    @_abc.abstractproperty
     def embedded_subdegree(self) -> int:
         """Degree of the maximum degree Lagrange space that is spanned by this element.
 
